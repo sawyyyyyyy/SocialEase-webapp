@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .shadow-soft {
+            box-shadow: 0 10px 40px -10px rgba(68, 95, 140, 0.1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#604f7f",
+                        "surface-container-highest": "#e1e2e5",
+                        "surface-tint": "#445f8c",
+                        "on-tertiary-fixed": "#141c28",
+                        "on-tertiary-container": "#363f4c",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ebdcff",
+                        "surface-variant": "#e1e2e5",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#acc7fb",
+                        "surface-container-high": "#e7e8eb",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d6e3ff",
+                        "inverse-on-surface": "#f0f1f4",
+                        "secondary-container": "#dac5fd",
+                        "inverse-surface": "#2e3133",
+                        "outline-variant": "#c4c6d0",
+                        "on-surface": "#191c1e",
+                        "on-error": "#ffffff",
+                        "secondary": "#675686",
+                        "primary": "#445f8c",
+                        "background": "#f8f9fc",
+                        "on-primary-fixed-variant": "#2b4773",
+                        "surface-dim": "#d9dadd",
+                        "surface-container-low": "#f2f3f6",
+                        "surface": "#f8f9fc",
+                        "primary-container": "#8faadc",
+                        "on-primary-container": "#213e69",
+                        "tertiary-fixed": "#dbe3f4",
+                        "secondary-fixed-dim": "#d2bdf5",
+                        "on-primary-fixed": "#001b3e",
+                        "on-background": "#191c1e",
+                        "surface-container": "#edeef1",
+                        "tertiary-container": "#a2aaba",
+                        "on-secondary-fixed-variant": "#4f3e6d",
+                        "primary-fixed-dim": "#acc7fb",
+                        "on-surface-variant": "#43474f",
+                        "surface-bright": "#f8f9fc",
+                        "on-tertiary-fixed-variant": "#3f4755",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#22123f",
+                        "outline": "#747780",
+                        "tertiary": "#575f6d",
+                        "tertiary-fixed-dim": "#bfc7d7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap-lg": "40px",
+                        "gutter": "16px",
+                        "stack-gap-sm": "12px",
+                        "container-padding": "24px",
+                        "stack-gap-md": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "button": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "h1": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "button": ["16px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "h1": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background font-body-md text-on-surface h-screen flex overflow-hidden">
+<aside class="flex flex-col h-full sticky top-0 left-0 p-6 h-screen w-72 border-r border-blue-100/50 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-md font-['Plus_Jakarta_Sans'] antialiased">
+<div class="mb-10">
+<a href="dashboard.html" class="text-xl font-bold tracking-tight text-blue-600 dark:text-blue-400 hover:text-blue-700 transition-colors">Social Ease</a>
+<p class="text-xs text-slate-500 font-medium mt-1 uppercase tracking-widest">Calm Companion</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="dashboard.html">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="assessment.html">
+<span class="material-symbols-outlined" data-icon="checklist">checklist</span>
+<span>Assessment</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="scinario.html">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span>Practice Modules</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-blue-600 dark:text-blue-400 font-bold bg-blue-50/50 dark:bg-blue-900/20 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Progress History</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="tip.html">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+<span>Tips & Resources</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="settings.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-blue-50 dark:border-slate-800 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 transition-colors" href="support.html">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 transition-colors" data-action="signout" href="login.html">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Sign Out</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 min-w-0 overflow-y-auto">
+<header class="flex justify-between items-center h-16 w-full px-8 sticky top-0 z-40 bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border-b border-blue-50/50 dark:border-slate-800 shadow-sm shadow-blue-200/10 dark:shadow-none font-['Plus_Jakarta_Sans'] text-sm font-medium">
+<div class="flex items-center gap-4">
+<h2 class="text-lg font-semibold text-slate-800 dark:text-slate-100">Progress History</h2>
+</div>
+<div class="flex items-center gap-2">
+<a href="settings.html" class="hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full p-2 inline-flex items-center justify-center text-blue-500 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</a>
+<a href="chat.html" class="hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full p-2 inline-flex items-center justify-center text-blue-500 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</a>
+<a href="settings.html" class="flex items-center gap-2 ml-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full p-1 pl-3 transition-all active:scale-95">
+<span class="font-medium text-slate-700" id="userNameDisplay"></span>
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-primary overflow-hidden" id="userAvatar"><span class="material-symbols-outlined text-xl">person</span></div>
+</a>
+</div>
+</header>
+<div class="p-container-padding space-y-stack-gap-lg" id="analysisContent">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+  <div class="lg:col-span-2 bg-white rounded-xl p-6 border border-surface-container-highest shadow-soft">
+    <div class="flex justify-between items-center mb-6">
+      <div>
+        <h3 class="font-h2 text-primary">Confidence Trends</h3>
+        <p class="text-body-md text-tertiary">Progress over the last 30 days</p>
+      </div>
+      <div class="flex gap-2">
+        <span class="bg-primary-container/20 text-on-primary-container px-3 py-1 rounded-full text-label-caps cursor-pointer" id="periodWeekly">WEEKLY</span>
+        <span class="bg-surface-container text-tertiary px-3 py-1 rounded-full text-label-caps cursor-pointer" id="periodMonthly">MONTHLY</span>
+      </div>
+    </div>
+    <div class="relative h-64 w-full flex items-end justify-between px-2 pt-4">
+      <svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 400 100" id="trendChart">
+        <defs>
+          <lineargradient id="gradient-blue" x1="0%" x2="0%" y1="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#445f8c;stop-opacity:1"></stop>
+            <stop offset="100%" style="stop-color:#445f8c;stop-opacity:0"></stop>
+          </lineargradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+  <div class="bg-secondary-container/30 rounded-xl p-6 border border-secondary-fixed shadow-soft flex flex-col items-center justify-center text-center">
+    <div class="mb-4 relative">
+      <svg class="w-32 h-32 transform -rotate-90">
+        <circle class="text-on-secondary-container/10" cx="64" cy="64" fill="transparent" r="56" stroke="currentColor" stroke-width="8"></circle>
+        <circle class="text-on-secondary-container" cx="64" cy="64" fill="transparent" r="56" stroke="currentColor" stroke-dasharray="351.8" stroke-dashoffset="351.8" stroke-linecap="round" stroke-width="8" id="streakCircle"></circle>
+      </svg>
+      <div class="absolute inset-0 flex flex-col items-center justify-center">
+        <span class="text-h1 text-on-secondary-container" id="analysisStreak"></span>
+        <span class="text-label-caps text-on-secondary-container/70">DAYS</span>
+      </div>
+    </div>
+    <h3 class="font-h2 text-on-secondary-container mb-2" id="analysisTitle"></h3>
+    <p class="text-body-md text-on-secondary-fixed-variant" id="analysisRank"></p>
+    <button id="streakHistoryBtn" class="mt-6 w-full py-3 bg-on-secondary-container text-white rounded-full font-button text-sm hover:scale-98 transition-transform inline-flex items-center justify-center" type="button">View Streak History</button>
+  </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-gutter">
+  <div class="bg-white p-6 rounded-xl border border-surface-container-highest flex items-center gap-4">
+    <div class="bg-primary-fixed w-12 h-12 rounded-full flex items-center justify-center">
+      <span class="material-symbols-outlined text-primary" data-icon="timer">timer</span>
+    </div>
+    <div>
+      <p class="text-label-caps text-tertiary">PRACTICE TIME</p>
+      <h4 class="text-h2 text-on-surface" id="analysisTime"></h4>
+    </div>
+  </div>
+  <div class="bg-white p-6 rounded-xl border border-surface-container-highest flex items-center gap-4">
+    <div class="bg-tertiary-fixed w-12 h-12 rounded-full flex items-center justify-center">
+      <span class="material-symbols-outlined text-tertiary" data-icon="task_alt">task_alt</span>
+    </div>
+    <div>
+      <p class="text-label-caps text-tertiary">SESSIONS</p>
+      <h4 class="text-h2 text-on-surface" id="analysisSessions"></h4>
+    </div>
+  </div>
+  <div id="achievements" class="lg:col-span-2 bg-white rounded-xl p-6 border border-surface-container-highest overflow-hidden">
+    <div class="flex justify-between items-center mb-6">
+      <h3 class="font-h2 text-primary">Earned Achievements</h3>
+    </div>
+    <div class="flex gap-6 overflow-x-auto pb-2" id="achievementsList"></div>
+  </div>
+</div>
+<div class="bg-white rounded-xl border border-surface-container-highest shadow-soft overflow-hidden">
+  <div class="p-6 border-b border-surface-container">
+    <h3 class="font-h2 text-primary">Activity History</h3>
+  </div>
+  <div class="overflow-x-auto">
+    <table class="w-full text-left">
+      <thead class="bg-surface-container-low">
+        <tr>
+          <th class="px-6 py-4 text-label-caps text-tertiary">MODULE</th>
+          <th class="px-6 py-4 text-label-caps text-tertiary">DATE</th>
+          <th class="px-6 py-4 text-label-caps text-tertiary">DURATION</th>
+          <th class="px-6 py-4 text-label-caps text-tertiary">CONFIDENCE GAIN</th>
+          <th class="px-6 py-4 text-label-caps text-tertiary">STATUS</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-surface-container" id="activityHistoryBody"></tbody>
+    </table>
+  </div>
+</div>
+<div class="bg-white rounded-xl border border-surface-container-highest shadow-soft overflow-hidden" id="assessmentHistorySection">
+  <div class="p-6 border-b border-surface-container">
+    <h3 class="font-h2 text-primary">Assessment History</h3>
+  </div>
+  <div class="p-6 space-y-4" id="analysisAssessmentHistory"></div>
+</div>
+<div class="bg-white p-8 rounded-xl border border-blue-50 shadow-soft relative overflow-hidden flex items-center">
+  <div class="relative z-10 max-w-xl">
+    <h3 class="text-h2 text-primary mb-2">Consistency is Key</h3>
+    <p class="text-body-md text-tertiary mb-6" id="analysisResearch"></p>
+    <div class="flex gap-4">
+      <a href="scinario.html" class="bg-primary text-white px-6 py-3 rounded-full font-button hover:scale-98 transition-transform inline-flex">Start Today's Session</a>
+      <button id="setReminderBtn" class="bg-surface-container text-primary px-6 py-3 rounded-full font-button hover:bg-surface-container-highest transition-colors inline-flex" type="button">Set Reminder</button>
+    </div>
+  </div>
+  <div class="absolute right-[-40px] top-[-40px] w-64 h-64 bg-primary-container/10 rounded-full blur-3xl"></div>
+  <div class="absolute right-12 top-1/2 -translate-y-1/2 hidden md:block">
+    <div class="w-24 h-24 rounded-full bg-glass border border-white/40 flex items-center justify-center animate-pulse">
+      <span class="material-symbols-outlined text-primary text-4xl" data-icon="self_improvement">self_improvement</span>
+    </div>
+  </div>
+</div>
+</div>
+</main>
+<div id="streakModal" class="hidden fixed inset-0 z-[999] bg-black/50 flex items-center justify-center p-6">
+  <div class="bg-white rounded-2xl w-full max-w-lg p-6 space-y-4 max-h-[80vh] flex flex-col">
+    <div class="flex items-center justify-between flex-shrink-0">
+      <h3 class="font-h2 text-h2 text-on-surface">Streak History</h3>
+      <button id="streakModalClose" class="text-on-surface-variant hover:text-primary" type="button">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <p class="text-sm text-on-surface-variant flex-shrink-0">Your completed exercises over the last 30 days.</p>
+    <div id="streakList" class="space-y-2 overflow-y-auto flex-1">
+      <p class="text-sm text-on-surface-variant">Loading...</p>
+    </div>
+  </div>
+</div>
+<div id="reminderModal" class="hidden fixed inset-0 z-[999] bg-black/50 flex items-center justify-center p-6">
+  <div class="bg-white rounded-2xl w-full max-w-sm p-6 space-y-4">
+    <div class="flex items-center justify-between">
+      <h3 class="font-h2 text-h2 text-on-surface">Set Daily Reminder</h3>
+      <button id="reminderModalClose" class="text-on-surface-variant hover:text-primary" type="button">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <p class="text-sm text-on-surface-variant">What time would you like to be reminded to practice?</p>
+    <input id="reminderTimeInput" class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none text-on-surface text-center text-2xl font-semibold" type="time" value="09:00"/>
+    <button id="reminderSaveBtn" class="w-full bg-primary text-on-primary py-3 rounded-full font-button text-button hover:scale-[0.98] active:scale-95 transition-all" type="button">Save Reminder</button>
+  </div>
+</div>
+<script src="app.js"></script>
+</body></html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(68, 95, 140, 0.1);
+        }
+        .breathing-bubble {
+            background: radial-gradient(circle, rgba(218, 197, 253, 0.4) 0%, rgba(143, 170, 220, 0.2) 100%);
+            filter: blur(40px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#604f7f",
+                        "surface-container-highest": "#e1e2e5",
+                        "surface-tint": "#445f8c",
+                        "on-tertiary-fixed": "#141c28",
+                        "on-tertiary-container": "#363f4c",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ebdcff",
+                        "surface-variant": "#e1e2e5",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#acc7fb",
+                        "surface-container-high": "#e7e8eb",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d6e3ff",
+                        "inverse-on-surface": "#f0f1f4",
+                        "secondary-container": "#dac5fd",
+                        "inverse-surface": "#2e3133",
+                        "outline-variant": "#c4c6d0",
+                        "on-surface": "#191c1e",
+                        "on-error": "#ffffff",
+                        "secondary": "#675686",
+                        "primary": "#445f8c",
+                        "background": "#f8f9fc",
+                        "on-primary-fixed-variant": "#2b4773",
+                        "surface-dim": "#d9dadd",
+                        "surface-container-low": "#f2f3f6",
+                        "surface": "#f8f9fc",
+                        "primary-container": "#8faadc",
+                        "on-primary-container": "#213e69",
+                        "tertiary-fixed": "#dbe3f4",
+                        "secondary-fixed-dim": "#d2bdf5",
+                        "on-primary-fixed": "#001b3e",
+                        "on-background": "#191c1e",
+                        "surface-container": "#edeef1",
+                        "tertiary-container": "#a2aaba",
+                        "on-secondary-fixed-variant": "#4f3e6d",
+                        "primary-fixed-dim": "#acc7fb",
+                        "on-surface-variant": "#43474f",
+                        "surface-bright": "#f8f9fc",
+                        "on-tertiary-fixed-variant": "#3f4755",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#22123f",
+                        "outline": "#747780",
+                        "tertiary": "#575f6d",
+                        "tertiary-fixed-dim": "#bfc7d7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap-lg": "40px",
+                        "gutter": "16px",
+                        "stack-gap-sm": "12px",
+                        "container-padding": "24px",
+                        "stack-gap-md": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "button": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "h1": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "button": ["16px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "h1": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background h-screen flex overflow-hidden">
+<!-- SideNavBar Shell -->
+<aside class="flex flex-col h-full sticky top-0 left-0 p-6 h-screen w-72 border-r border-blue-100/50 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-md font-['Plus_Jakarta_Sans'] antialiased">
+<div class="mb-10">
+<a href="dashboard.html" class="text-xl font-bold tracking-tight text-blue-600 dark:text-blue-400 hover:text-blue-700 transition-colors">Social Ease</a>
+<p class="text-xs text-slate-500 font-medium mt-1 uppercase tracking-widest">Calm Companion</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="dashboard.html">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="assessment.html">
+<span class="material-symbols-outlined" data-icon="checklist">checklist</span>
+<span>Assessment</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="scinario.html">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span>Practice Modules</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="analysis.html">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Progress History</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-blue-600 dark:text-blue-400 font-bold bg-blue-50/50 dark:bg-blue-900/20 rounded-lg active:scale-95 transition-transform duration-200" href="tip.html">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+<span>Tips & Resources</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="settings.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-blue-100/50 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="support.html">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" data-action="signout" href="login.html">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Sign Out</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 overflow-y-auto relative">
+<!-- Top App Bar -->
+<header class="flex justify-between items-center h-16 w-full px-8 sticky top-0 z-40 bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border-b border-blue-50/50 dark:border-slate-800 shadow-sm shadow-blue-200/10 dark:shadow-none font-['Plus_Jakarta_Sans'] text-sm font-medium">
+<div class="flex items-center gap-4">
+<h2 class="text-lg font-semibold text-slate-800 dark:text-slate-100">Tips &amp; Resources</h2>
+</div>
+<div class="flex items-center gap-2">
+<a href="settings.html" class="hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full p-2 inline-flex items-center justify-center text-blue-500 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</a>
+<a href="chat.html" class="hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full p-2 inline-flex items-center justify-center text-blue-500 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</a>
+<a href="settings.html" class="flex items-center gap-2 ml-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full p-1 pl-3 transition-all active:scale-95">
+<span class="font-medium text-slate-700" id="userNameDisplay"></span>
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-primary overflow-hidden" id="userAvatar"><span class="material-symbols-outlined text-xl">person</span></div>
+</a>
+</div>
+</header>
+<!-- Content Body -->
+<section class="p-container-padding max-w-7xl mx-auto space-y-stack-gap-lg">
+<!-- Hero & Search Section -->
+<section class="mb-stack-gap-lg text-center relative">
+<div class="breathing-bubble absolute -top-20 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full -z-10 opacity-60"></div>
+<h2 class="font-h1 text-h1 text-on-surface mb-stack-gap-sm">Gentle Wisdom for Your Journey</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-stack-gap-md">
+                    Explore curated insights designed to help you navigate social moments with ease and self-compassion.
+                </p>
+<div class="relative max-w-xl mx-auto">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-6 py-4 rounded-full border-none bg-secondary-container/20 focus:bg-white focus:ring-4 focus:ring-primary/10 transition-all font-body-md text-body-md placeholder:text-outline shadow-sm" id="tipSearch" placeholder="Search for tips, exercises, or techniques..." type="text"/>
+</div>
+</section>
+<!-- Categorized Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-stack-gap-md">
+<!-- Category Section: Breathing Exercises -->
+<div class="md:col-span-8 group">
+<div class="glass-card rounded-xl p-stack-gap-md h-full flex flex-col transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="flex items-center justify-between mb-stack-gap-sm">
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="air">air</span>
+</div>
+<h3 class="font-h2 text-h2 text-on-surface">Breathing Exercises</h3>
+</div>
+<span class="text-label-caps font-label-caps text-on-secondary-container bg-secondary-container px-3 py-1 rounded-full uppercase tracking-widest" id="breathingGuidesCount"></span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Immediate physiological calming techniques for when you feel the first signs of tension.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-1">
+<a href="scinario.html" class="block bg-white/50 rounded-lg p-4 border border-outline-variant/30 hover:bg-white transition-colors cursor-pointer">
+<p class="font-button text-button text-primary mb-1">The 4-7-8 Technique</p>
+<p class="text-sm text-on-surface-variant">Regulate your nervous system in under 60 seconds.</p>
+</a>
+<a href="scinario.html" class="block bg-white/50 rounded-lg p-4 border border-outline-variant/30 hover:bg-white transition-colors cursor-pointer">
+<p class="font-button text-button text-primary mb-1">Box Breathing</p>
+<p class="text-sm text-on-surface-variant">The elite performance method for maintaining focus.</p>
+</a>
+</div>
+</div>
+</div>
+<!-- Category Section: Social Prep (Visual Focus) -->
+<div class="md:col-span-4 h-full">
+<div class="glass-card rounded-xl overflow-hidden h-full flex flex-col group transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="h-48 relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="a peaceful minimalist cafe interior with soft morning light filtering through large windows and a few people sitting far apart" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjNrGhy9-_YscIpqCla9z3qwTeRbFmTNn1yhYTVylLDrfsJrB2dPHF6w7Vz3oK0-vnhTaY-RHnl4Ft6-he1hlnRxS1efi-sY0b488UvclyA_TULSh_Ej5bvWkGbsffMkLPw3DjWziiMVyiY-pCAcu-W8vBFLEhyA9c0L2JN9SRsZfizI8zL9_J_SHNMjD5OBwAvaAKBOyH-DLyjFyXB6aF4lQeGbda1ccY94JQSSdytVFrr-7CTORK1_SmOvsMdZudQaxoClpOiQc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<span class="material-symbols-outlined mb-1" data-icon="groups">groups</span>
+<p class="font-h2 text-h2">Social Prep</p>
+</div>
+</div>
+<div class="p-stack-gap-md flex-1">
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Mental rehearsing and boundary setting for upcoming events.</p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle" data-weight="fill">check_circle</span>
+                                    The 15-Minute Exit Plan
+                                </li>
+<li class="flex items-center gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle" data-weight="fill">check_circle</span>
+                                    Conversation Starters
+                                </li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Category Section: Mindset Shifts (Wide Card) -->
+<div class="md:col-span-12">
+<div class="glass-card rounded-xl p-stack-gap-md flex flex-col md:flex-row gap-stack-gap-md items-center transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="md:w-1/3">
+<div class="bg-secondary-container/30 rounded-2xl p-8 aspect-square flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-on-secondary-container" data-icon="auto_awesome">auto_awesome</span>
+</div>
+</div>
+<div class="md:w-2/3">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="lightbulb">lightbulb</span>
+<h3 class="font-h2 text-h2 text-on-surface">Mindset Shifts</h3>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Reframing thoughts from "What if they judge me?" to "What if I enjoy this?"</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-stack-gap-sm">
+<div class="bg-surface-container-low rounded-xl p-5 border border-transparent hover:border-primary/20 transition-all">
+<p class="font-button text-button text-on-surface mb-2">Spotlight Effect</p>
+<p class="text-xs text-on-surface-variant uppercase font-label-caps">Reality Check</p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-5 border border-transparent hover:border-primary/20 transition-all">
+<p class="font-button text-button text-on-surface mb-2">Self-Compassion</p>
+<p class="text-xs text-on-surface-variant uppercase font-label-caps">Internal Voice</p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-5 border border-transparent hover:border-primary/20 transition-all">
+<p class="font-button text-button text-on-surface mb-2">Imperfect Action</p>
+<p class="text-xs text-on-surface-variant uppercase font-label-caps">Execution</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Resource Library Section -->
+<div class="md:col-span-6">
+<div class="glass-card rounded-xl p-stack-gap-md transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="flex items-center gap-3 mb-stack-gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="library_books">library_books</span>
+<h3 class="font-h2 text-h2 text-on-surface">Reading List</h3>
+</div>
+<div class="space-y-4">
+<a href="#" class="flex gap-4 items-start group cursor-pointer reading-item" data-book-id="quiet">
+<div class="w-16 h-20 bg-surface-container-highest rounded-md flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up of a minimalist book cover with soft pastel colors and clean serif typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVnhqdCW0RYo_EmvGj8XYyb-ReWjZukJhIwyzc7TC-_wiW2gAmEQ03fKMUjs4xz0gWWNHOfgG_c01Ds4GW5a_labgOmBkYTJRwEPAoH0teysIKKEDVPQUyato6TOaLlTp7qRZ0kvQcACprXIfAgmb-FqEiHdiQYFtrIDSOQGAbVzKiHBltqerSP6pWNRM8FoYyC83UmjUkucsD8Zt7C9d9-LfRBCZd2vlc_zYk2VB5kIOl4UowVrOg9ie1Ab-QgNTwCzuQ7WkO1Mk"/>
+</div>
+<div class="flex-1">
+<p class="font-button text-button text-on-surface group-hover:text-primary transition-colors">Quiet: The Power of Introverts</p>
+<p class="text-sm text-on-surface-variant">Understanding the strength of your inner world.</p>
+</div>
+<button class="text-xs font-semibold text-primary hover:underline save-reading" type="button">Save</button>
+</a>
+<div class="hidden mt-3 p-4 rounded-xl bg-surface-container-low text-sm text-on-surface reading-details" data-book-id="quiet">
+<p class="font-semibold mb-2">Key takeaways</p>
+<ul class="space-y-1">
+<li>Introversion is a strength, not a flaw.</li>
+<li>Design environments that match your energy.</li>
+<li>Prepare scripts for high-pressure moments.</li>
+</ul>
+</div>
+<a href="#" class="flex gap-4 items-start group cursor-pointer reading-item" data-book-id="imperfection">
+<div class="w-16 h-20 bg-surface-container-highest rounded-md flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="a stack of vintage books on a white wooden table with soft focus morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpD785Wr1PPnxdX82JT9FUJ8VL-AiQziEzrWZOsjrgjm3g3hnpo7eY400-GUnXgcFqK6T0vhCm0YSXRyqlDaWD1DQm2AS6ues8EpLA0qWgy_EDFDN07Tp2Pdv-Hws3SlmxY7ZG_DPLVFpgTHIGCAT7HnTLKo8oyNmMF5_iK5zOXELTa6CDY_51gQ2_i41O486kMcizCVsB4Nq8pRjeuGX3V3FxpD582z_8DnDvA9wMvAWgYUY0JiP7_VWzcTJvUmJbyjgeasgQJZA"/>
+</div>
+<div class="flex-1">
+<p class="font-button text-button text-on-surface group-hover:text-primary transition-colors">The Gifts of Imperfection</p>
+<p class="text-sm text-on-surface-variant">Embracing who you are over who you should be.</p>
+</div>
+<button class="text-xs font-semibold text-primary hover:underline save-reading" type="button">Save</button>
+</a>
+<div class="hidden mt-3 p-4 rounded-xl bg-surface-container-low text-sm text-on-surface reading-details" data-book-id="imperfection">
+<p class="font-semibold mb-2">Key takeaways</p>
+<ul class="space-y-1">
+<li>Progress beats perfection every day.</li>
+<li>Self-compassion reduces anxiety spirals.</li>
+<li>Practice sharing imperfect stories.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Audio Guides Section -->
+<div class="md:col-span-6">
+<div class="glass-card rounded-xl p-stack-gap-md transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="flex items-center gap-3 mb-stack-gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="headphones">headphones</span>
+<h3 class="font-h2 text-h2 text-on-surface">Audio Guides</h3>
+</div>
+<div class="space-y-2">
+<a href="#" class="w-full flex items-center justify-between p-3 rounded-lg bg-white/40 hover:bg-white transition-all border border-outline-variant/10 text-left audio-guide" data-guide-index="0">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="play_circle">play_circle</span>
+<span class="font-body-md text-body-md">Pre-Party Confidence Boost</span>
+</div>
+<span class="text-xs text-outline" data-guide-duration="0"></span>
+</a>
+<a href="#" class="w-full flex items-center justify-between p-3 rounded-lg bg-white/40 hover:bg-white transition-all border border-outline-variant/10 text-left audio-guide" data-guide-index="1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="play_circle">play_circle</span>
+<span class="font-body-md text-body-md">Releasing Post-Social Tension</span>
+</div>
+<span class="text-xs text-outline" data-guide-duration="1"></span>
+</a>
+<a href="#" class="w-full flex items-center justify-between p-3 rounded-lg bg-white/40 hover:bg-white transition-all border border-outline-variant/10 text-left audio-guide" data-guide-index="2">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="play_circle">play_circle</span>
+<span class="font-body-md text-body-md">Grounding in the Grocery Store</span>
+</div>
+<span class="text-xs text-outline" data-guide-duration="2"></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Suggestion Footer -->
+<footer class="mt-stack-gap-lg text-center pb-stack-gap-lg">
+<div class="p-stack-gap-md bg-tertiary-container/10 rounded-2xl border border-tertiary-container/20">
+<p class="font-body-md text-body-md text-on-tertiary-container mb-4">Don't see what you're looking for?</p>
+      <button id="suggestResourceBtn" class="bg-primary text-on-primary px-8 py-3 rounded-full font-button text-button shadow-lg shadow-primary/20 hover:scale-95 transition-transform inline-flex" type="button">
+                        Suggest a Resource
+                    </button>
+</div>
+</footer>
+</section>
+</main>
+<!-- Floating Action Button - Only on relevant screens -->
+<button id="savedTipsBtn" class="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-2xl hover:bg-blue-700 active:scale-95 transition-all z-50 flex items-center gap-2 cursor-pointer">
+  <span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+  <span class="font-button">My Saved Tips</span>
+</button>
+<script src="app.js"></script>
+<div id="suggestModal" class="hidden fixed inset-0 z-[999] bg-black/50 flex items-center justify-center p-6">
+  <div class="bg-white rounded-2xl w-full max-w-md p-6 space-y-4">
+    <div class="flex items-center justify-between">
+      <h3 class="font-h2 text-h2 text-on-surface">Suggest a Resource</h3>
+      <button id="suggestModalClose" class="text-on-surface-variant hover:text-primary" type="button">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <p class="text-sm text-on-surface-variant">Know a great resource that should be here? Let us know!</p>
+    <input id="suggestTitle" class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none text-on-surface" placeholder="Resource title" type="text"/>
+    <input id="suggestUrl" class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none text-on-surface" placeholder="URL (optional)" type="text"/>
+    <textarea id="suggestDesc" class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none text-on-surface min-h-[100px] resize-none" placeholder="Why do you recommend this?"></textarea>
+    <button id="suggestSubmitBtn" class="w-full bg-primary text-on-primary py-3 rounded-full font-button text-button hover:scale-[0.98] active:scale-95 transition-all" type="button">Submit Suggestion</button>
+  </div>
+</div>
+<div id="savedTipsModal" class="hidden fixed inset-0 z-[999] bg-black/50 flex items-center justify-center p-6">
+  <div class="bg-white rounded-2xl w-full max-w-md p-6 space-y-4">
+    <div class="flex items-center justify-between">
+      <h3 class="font-h2 text-h2 text-on-surface">My Saved Tips</h3>
+      <button id="savedTipsClose" class="text-on-surface-variant hover:text-primary" type="button">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div id="savedTipsList" class="space-y-2 max-h-64 overflow-y-auto">
+      <p class="text-sm text-on-surface-variant">No saved tips yet.</p>
+    </div>
+  </div>
+</div>
+<div id="audioModal" class="hidden fixed inset-0 z-[999] bg-black/50 flex items-center justify-center p-6">
+  <div class="bg-white rounded-2xl w-full max-w-md p-6 space-y-4">
+    <div class="flex items-center justify-between">
+      <h3 class="font-h2 text-h2 text-on-surface" id="audioTitle"></h3>
+      <button id="audioClose" class="text-on-surface-variant hover:text-primary" type="button">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <p class="text-sm text-on-surface-variant" id="audioDesc"></p>
+    <div class="space-y-2">
+      <div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+        <div class="h-full bg-primary rounded-full" id="audioProgress" style="width:0%"></div>
+      </div>
+      <div class="flex justify-between text-xs text-on-surface-variant">
+        <span id="audioCurrent">0:00</span>
+        <span id="audioTotal">0:00</span>
+      </div>
+    </div>
+    <div class="flex items-center justify-between">
+      <button id="audioPlay" class="bg-primary text-on-primary px-4 py-2 rounded-full font-button text-button" type="button">Play</button>
+      <button id="audioSave" class="text-primary font-button text-sm" type="button">Save</button>
+    </div>
+  </div>
+</div>
+</body></html>

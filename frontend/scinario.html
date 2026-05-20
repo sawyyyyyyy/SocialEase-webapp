@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-container": "#604f7f",
+                "surface-container-highest": "#e1e2e5",
+                "surface-tint": "#445f8c",
+                "on-tertiary-fixed": "#141c28",
+                "on-tertiary-container": "#363f4c",
+                "error-container": "#ffdad6",
+                "on-secondary": "#ffffff",
+                "secondary-fixed": "#ebdcff",
+                "surface-variant": "#e1e2e5",
+                "on-primary": "#ffffff",
+                "inverse-primary": "#acc7fb",
+                "surface-container-high": "#e7e8eb",
+                "surface-container-lowest": "#ffffff",
+                "primary-fixed": "#d6e3ff",
+                "inverse-on-surface": "#f0f1f4",
+                "secondary-container": "#dac5fd",
+                "inverse-surface": "#2e3133",
+                "outline-variant": "#c4c6d0",
+                "on-surface": "#191c1e",
+                "on-error": "#ffffff",
+                "secondary": "#675686",
+                "primary": "#445f8c",
+                "background": "#f8f9fc",
+                "on-primary-fixed-variant": "#2b4773",
+                "surface-dim": "#d9dadd",
+                "surface-container-low": "#f2f3f6",
+                "surface": "#f8f9fc",
+                "primary-container": "#8faadc",
+                "on-primary-container": "#213e69",
+                "tertiary-fixed": "#dbe3f4",
+                "secondary-fixed-dim": "#d2bdf5",
+                "on-primary-fixed": "#001b3e",
+                "on-background": "#191c1e",
+                "surface-container": "#edeef1",
+                "tertiary-container": "#a2aaba",
+                "on-secondary-fixed-variant": "#4f3e6d",
+                "primary-fixed-dim": "#acc7fb",
+                "on-surface-variant": "#43474f",
+                "surface-bright": "#f8f9fc",
+                "on-tertiary-fixed-variant": "#3f4755",
+                "on-error-container": "#93000a",
+                "on-tertiary": "#ffffff",
+                "error": "#ba1a1a",
+                "on-secondary-fixed": "#22123f",
+                "outline": "#747780",
+                "tertiary": "#575f6d",
+                "tertiary-fixed-dim": "#bfc7d7"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "stack-gap-lg": "40px",
+                "gutter": "16px",
+                "stack-gap-sm": "12px",
+                "container-padding": "24px",
+                "stack-gap-md": "24px",
+                "unit": "8px"
+            },
+            "fontFamily": {
+                "h2": ["Plus Jakarta Sans"],
+                "body-md": ["Plus Jakarta Sans"],
+                "button": ["Plus Jakarta Sans"],
+                "body-lg": ["Plus Jakarta Sans"],
+                "label-caps": ["Plus Jakarta Sans"],
+                "h1": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "button": ["16px", {"lineHeight": "20px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                "h1": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .chat-bubble-received {
+            border-bottom-left-radius: 4px;
+        }
+        .chat-bubble-sent {
+            border-bottom-right-radius: 4px;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d6e3ff;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #acc7fb;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background h-screen flex overflow-hidden">
+<!-- SideNavBar Anchor -->
+<aside class="flex flex-col h-full sticky top-0 left-0 p-6 h-screen w-72 border-r border-blue-100/50 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-md font-['Plus_Jakarta_Sans'] antialiased">
+<div class="mb-10">
+<a href="dashboard.html" class="text-xl font-bold tracking-tight text-blue-600 dark:text-blue-400 hover:text-blue-700 transition-colors">Social Ease</a>
+<p class="text-xs text-slate-500 font-medium mt-1 uppercase tracking-widest">Calm Companion</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="dashboard.html">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="assessment.html">
+<span class="material-symbols-outlined" data-icon="checklist">checklist</span>
+<span>Assessment</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-blue-600 dark:text-blue-400 font-bold bg-blue-50/50 dark:bg-blue-900/20 rounded-lg active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span>Practice Modules</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="analysis.html">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Progress History</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="tip.html">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+<span>Tips & Resources</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="settings.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-blue-100/50 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="support.html">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" data-action="signout" href="login.html">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col min-w-0 h-screen overflow-hidden">
+<!-- TopAppBar Anchor -->
+<header class="flex justify-between items-center h-16 w-full px-8 sticky top-0 z-40 bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border-b border-blue-50/50 dark:border-slate-800 shadow-sm shadow-blue-200/10 dark:shadow-none font-['Plus_Jakarta_Sans'] text-sm font-medium">
+<div class="flex items-center gap-4">
+<h2 class="text-lg font-semibold text-slate-800 dark:text-slate-100">Practice Modules</h2>
+<div class="h-4 w-px bg-slate-200"></div>
+<span class="text-sm font-medium text-primary" id="scenarioActiveLabel"></span>
+</div>
+<div class="flex items-center gap-2">
+<a href="settings.html" class="hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full p-2 inline-flex items-center justify-center text-blue-500 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</a>
+<a href="chat.html" class="hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full p-2 inline-flex items-center justify-center text-blue-500 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</a>
+<a href="settings.html" class="flex items-center gap-2 ml-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full p-1 pl-3 transition-all active:scale-95">
+<span class="font-medium text-slate-700" id="userNameDisplay"></span>
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-primary overflow-hidden" id="userAvatar"><span class="material-symbols-outlined text-xl">person</span></div>
+</a>
+</div>
+</header>
+<!-- Application Layout: Scenario List and Workspace -->
+<div class="flex-1 flex overflow-hidden">
+<!-- Left Side: Scenario List -->
+<section class="w-80 flex flex-col bg-surface-container-low border-r border-blue-50 overflow-y-auto">
+<div class="p-6">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-h2 text-h2 text-primary">Scenarios</h3>
+<div class="relative">
+  <button id="filterBtn" class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">filter_list</button>
+  <div id="filterDropdown" class="absolute right-0 top-8 z-50 bg-white rounded-xl shadow-xl border border-blue-50 py-2 min-w-[140px] hidden">
+    <button class="w-full text-left px-4 py-2 text-sm hover:bg-surface-container-high transition-colors" data-filter="all">All</button>
+    <button class="w-full text-left px-4 py-2 text-sm hover:bg-surface-container-high transition-colors" data-filter="easy">Easy</button>
+    <button class="w-full text-left px-4 py-2 text-sm hover:bg-surface-container-high transition-colors" data-filter="medium">Medium</button>
+    <button class="w-full text-left px-4 py-2 text-sm hover:bg-surface-container-high transition-colors" data-filter="hard">Hard</button>
+  </div>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Active Scenario -->
+<div data-difficulty="" class="p-4 rounded-xl bg-white border border-primary/20 shadow-lg shadow-primary/5 cursor-pointer transform hover:scale-[1.01] transition-all" id="activeScenarioCard">
+<div class="flex justify-between items-start mb-2">
+<span class="bg-primary-container/30 text-on-primary-container text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Active</span>
+<span class="material-symbols-outlined text-primary text-sm">coffee</span>
+</div>
+<h4 class="font-bold text-slate-800 mb-1" id="activeScenarioTitle"></h4>
+<p class="text-xs text-slate-500 mb-3" id="activeScenarioDesc"></p>
+<div class="flex gap-2">
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] px-2 py-0.5 rounded-full font-medium" id="activeScenarioDifficulty"></span>
+</div>
+</div>
+<!-- Other Scenarios -->
+<a href="chat.html" data-scenario="job-interview" data-difficulty="hard" class="block p-4 rounded-xl bg-white/50 border border-transparent hover:border-blue-100 hover:bg-white cursor-pointer transition-all">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs text-slate-400">New</span>
+<span class="material-symbols-outlined text-slate-400 text-sm">work</span>
+</div>
+<h4 class="font-bold text-slate-800 mb-1" data-field="title">Job Interview</h4>
+<p class="text-xs text-slate-500 mb-3" data-field="desc">Practice answering common questions with a calm tone.</p>
+<div class="flex gap-2">
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] px-2 py-0.5 rounded-full font-medium" data-field="difficulty">Difficulty: Hard</span>
+</div>
+</a>
+<a href="chat.html" data-scenario="asking-directions" data-difficulty="medium" class="block p-4 rounded-xl bg-white/50 border border-transparent hover:border-blue-100 hover:bg-white cursor-pointer transition-all">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs text-slate-400" data-field="duration"></span>
+<span class="material-symbols-outlined text-slate-400 text-sm">group</span>
+</div>
+<h4 class="font-bold text-slate-800 mb-1" data-field="title">Asking for Directions</h4>
+<p class="text-xs text-slate-500 mb-3" data-field="desc">Approaching a stranger to find your way in a city.</p>
+<div class="flex gap-2">
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] px-2 py-0.5 rounded-full font-medium" data-field="difficulty">Difficulty: Medium</span>
+</div>
+</a>
+<a href="chat.html" data-scenario="returning-item" data-difficulty="hard" class="block p-4 rounded-xl bg-white/50 border border-transparent hover:border-blue-100 hover:bg-white cursor-pointer transition-all">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs text-slate-400">Locked</span>
+<span class="material-symbols-outlined text-slate-400 text-sm">shopping_bag</span>
+</div>
+<h4 class="font-bold text-slate-800 mb-1" data-field="title">Returning an Item</h4>
+<p class="text-xs text-slate-500 mb-3" data-field="desc">Handling a potential conflict at a retail store.</p>
+<div class="flex gap-2">
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] px-2 py-0.5 rounded-full font-medium" data-field="difficulty">Difficulty: Hard</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Right Side: Active Practice Session -->
+<section class="flex-1 flex flex-col bg-white relative">
+<!-- Background Decorative Element (Breathing Bubble Suggestion) -->
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-br from-primary-container/20 to-secondary-container/20 rounded-full blur-3xl opacity-50 -z-10"></div>
+<!-- Chat History Area -->
+<div class="flex-1 overflow-y-auto p-container-padding space-y-stack-gap-md relative" id="scenarioMessages"></div>
+<!-- Input Footer Area -->
+<div class="p-container-padding border-t border-blue-50 bg-white/80 backdrop-blur-md">
+<div class="max-w-3xl mx-auto flex flex-col gap-3">
+<!-- Quick Reply Suggestions / Mood Tags -->
+<div class="flex gap-2 mb-2 overflow-x-auto pb-1">
+<button class="px-4 py-1.5 rounded-full bg-secondary-container/20 text-on-secondary-container border border-secondary-container/30 text-xs font-medium hover:bg-secondary-container/40 transition-colors whitespace-nowrap scenario-suggestion" data-text="Yes, please.">
+                                "Yes, please."
+                            </button>
+<button class="px-4 py-1.5 rounded-full bg-secondary-container/20 text-on-secondary-container border border-secondary-container/30 text-xs font-medium hover:bg-secondary-container/40 transition-colors whitespace-nowrap scenario-suggestion" data-text="No thank you, just as it is.">
+                                "No thank you, just as it is."
+                            </button>
+<button class="px-4 py-1.5 rounded-full bg-secondary-container/20 text-on-secondary-container border border-secondary-container/30 text-xs font-medium hover:bg-secondary-container/40 transition-colors whitespace-nowrap scenario-suggestion" data-text="Actually, I'll pass on the muffin.">
+                                "Actually, I'll pass on the muffin."
+                            </button>
+</div>
+<!-- Chat Input -->
+<div class="relative group">
+<textarea class="w-full min-h-[120px] p-6 pr-16 bg-surface-container-low border border-transparent focus:border-primary-container focus:bg-white focus:ring-4 focus:ring-primary-fixed/30 rounded-3xl resize-none transition-all outline-none text-body-md placeholder-slate-400" id="scenarioInput" placeholder="Type your response here..."></textarea>
+<div class="absolute bottom-4 right-4 flex items-center gap-2">
+<button class="p-3 bg-primary text-white rounded-2xl shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-all" id="scenarioSend">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+<!-- Interaction Tools -->
+<div class="flex items-center justify-between px-2">
+<div class="flex gap-4">
+<button class="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors" id="voiceBtn">
+<span class="material-symbols-outlined text-lg">mic</span>
+<span class="text-xs font-bold uppercase tracking-widest">Voice</span>
+</button>
+<button class="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors" id="hintBtn">
+<span class="material-symbols-outlined text-lg">lightbulb</span>
+<span class="text-xs font-bold uppercase tracking-widest">Hint</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-slate-400">
+<span class="text-xs font-medium italic">Shift + Enter to send</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Optional: Insights / Feedback Side Panel -->
+<aside class="w-72 bg-surface-container border-l border-blue-50 overflow-y-auto hidden xl:flex flex-col">
+<div class="p-6">
+<h3 class="font-label-caps text-label-caps text-primary mb-6">LIVE ANALYSIS</h3>
+<div class="space-y-6">
+<!-- Anxiety Meter -->
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold text-slate-600">Simulated Anxiety</span>
+<span class="text-[10px] font-bold text-primary" id="anxietyLabel">STABLE</span>
+</div>
+<div class="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" id="anxietyBar" style="width: 0%"></div>
+</div>
+</div>
+<!-- Tip Card -->
+<div class="p-4 bg-white rounded-2xl border border-blue-50 shadow-sm">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+<span class="text-xs font-bold">PRO TIP</span>
+</div>
+<p class="text-xs text-slate-600 leading-relaxed" id="scenarioProTip"></p>
+</div>
+<!-- Progress Bubble -->
+<div class="aspect-square w-full glass-panel border border-primary/10 rounded-full flex flex-center flex-col items-center justify-center relative overflow-hidden">
+<!-- Visual Breathing Bubble simulation -->
+<div class="absolute inset-0 bg-primary/5 animate-pulse"></div>
+<span class="text-primary font-bold text-3xl" id="progressPercent"></span>
+<span class="text-[10px] font-bold text-slate-400 uppercase">Complete</span>
+</div>
+</div>
+</div>
+<div class="mt-auto p-6">
+<button class="w-full py-3 bg-surface-container-highest text-on-surface-variant font-button text-sm rounded-xl hover:bg-slate-300 transition-colors" data-action="end-session">
+                        End Session
+                    </button>
+</div>
+</aside>
+</div>
+</main>
+<!-- FAB Rule Suppression: FAB is not rendered on this specific task-focused screen -->
+<script src="app.js"></script>
+</body></html>

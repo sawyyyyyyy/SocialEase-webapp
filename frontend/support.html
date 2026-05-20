@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Support - Social Ease</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#604f7f",
+                    "surface-container-highest": "#e1e2e5",
+                    "surface-tint": "#445f8c",
+                    "on-tertiary-fixed": "#141c28",
+                    "on-tertiary-container": "#363f4c",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#ebdcff",
+                    "surface-variant": "#e1e2e5",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#acc7fb",
+                    "surface-container-high": "#e7e8eb",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#d6e3ff",
+                    "inverse-on-surface": "#f0f1f4",
+                    "secondary-container": "#dac5fd",
+                    "inverse-surface": "#2e3133",
+                    "outline-variant": "#c4c6d0",
+                    "on-surface": "#191c1e",
+                    "on-error": "#ffffff",
+                    "secondary": "#675686",
+                    "primary": "#445f8c",
+                    "background": "#f8f9fc",
+                    "on-primary-fixed-variant": "#2b4773",
+                    "surface-dim": "#d9dadd",
+                    "surface-container-low": "#f2f3f6",
+                    "surface": "#f8f9fc",
+                    "primary-container": "#8faadc",
+                    "on-primary-container": "#213e69",
+                    "tertiary-fixed": "#dbe3f4",
+                    "secondary-fixed-dim": "#d2bdf5",
+                    "on-primary-fixed": "#001b3e",
+                    "on-background": "#191c1e",
+                    "surface-container": "#edeef1",
+                    "tertiary-container": "#a2aaba",
+                    "on-secondary-fixed-variant": "#4f3e6d",
+                    "primary-fixed-dim": "#acc7fb",
+                    "on-surface-variant": "#43474f",
+                    "surface-bright": "#f8f9fc",
+                    "on-tertiary-fixed-variant": "#3f4755",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#22123f",
+                    "outline": "#747780",
+                    "tertiary": "#575f6d",
+                    "tertiary-fixed-dim": "#bfc7d7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-gap-lg": "40px",
+                    "gutter": "16px",
+                    "stack-gap-sm": "12px",
+                    "container-padding": "24px",
+                    "stack-gap-md": "24px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "h2": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "button": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-caps": ["Plus Jakarta Sans"],
+                    "h1": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "button": ["16px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "h1": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background h-screen flex overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="flex flex-col h-full sticky top-0 left-0 p-6 h-screen w-72 border-r border-blue-100/50 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-md font-['Plus_Jakarta_Sans'] antialiased">
+<div class="mb-10">
+<a href="dashboard.html" class="text-xl font-bold tracking-tight text-blue-600 dark:text-blue-400 hover:text-blue-700 transition-colors">Social Ease</a>
+<p class="text-xs text-slate-500 font-medium mt-1 uppercase tracking-widest">Calm Companion</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="dashboard.html">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="assessment.html">
+<span class="material-symbols-outlined" data-icon="checklist">checklist</span>
+<span>Assessment</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="scinario.html">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span>Practice Modules</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="analysis.html">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Progress History</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="tip.html">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+<span>Tips & Resources</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" href="settings.html">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="pt-6 border-t border-blue-100/50 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-blue-600 dark:text-blue-400 font-bold bg-blue-50/50 dark:bg-blue-900/20 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:bg-blue-50/30 dark:hover:bg-blue-900/10 transition-colors" data-action="signout" href="login.html">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 overflow-y-auto relative">
+<!-- Top App Bar -->
+<header class="flex justify-between items-center h-16 w-full px-8 sticky top-0 z-40 bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border-b border-blue-50/50 dark:border-slate-800 shadow-sm shadow-blue-200/10 dark:shadow-none font-['Plus_Jakarta_Sans'] text-sm font-medium">
+<div class="flex items-center gap-4">
+<h2 class="text-lg font-semibold text-slate-800 dark:text-slate-100">Support</h2>
+</div>
+<div class="flex items-center gap-2">
+<a href="settings.html" class="hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full p-2 inline-flex items-center justify-center text-blue-500 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</a>
+<a href="chat.html" class="hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full p-2 inline-flex items-center justify-center text-blue-500 transition-all active:scale-95">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</a>
+<a href="settings.html" class="flex items-center gap-2 ml-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-full p-1 pl-3 transition-all active:scale-95">
+<span class="font-medium text-slate-700" id="userNameDisplay"></span>
+<div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-primary overflow-hidden" id="userAvatar"><span class="material-symbols-outlined text-xl">person</span></div>
+</a>
+</div>
+</header>
+<!-- Content Body -->
+<section class="p-container-padding max-w-4xl mx-auto space-y-stack-gap-lg">
+<!-- Hero -->
+<div class="relative overflow-hidden rounded-3xl p-8 bg-gradient-to-br from-primary-container to-secondary-container min-h-[180px] flex flex-col justify-end">
+<div class="relative z-10 space-y-2">
+<h1 class="font-h1 text-h1 text-on-primary-container">How can we help you?</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container/80 max-w-xl">We're here to support you on your journey. Browse FAQs or reach out to us directly.</p>
+</div>
+</div>
+<!-- FAQ Section -->
+<div class="bg-white rounded-3xl border border-blue-50 p-8 space-y-6">
+<h3 class="font-h2 text-h2 text-on-surface pb-4 border-b border-blue-50">Frequently Asked Questions</h3>
+<div class="space-y-4">
+<div class="p-5 bg-surface-container-low rounded-2xl">
+<h4 class="font-button text-button text-on-surface mb-2">How do I start a practice session?</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Navigate to Practice Modules from the sidebar, choose a scenario that matches your comfort level, and click to begin. Your progress will be saved automatically.</p>
+</div>
+<div class="p-5 bg-surface-container-low rounded-2xl">
+<h4 class="font-button text-button text-on-surface mb-2">How is my anxiety assessment scored?</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Each question is scored from 1-5 based on your response. Your total score helps us recommend the most suitable exercises and track your improvement over time.</p>
+</div>
+<div class="p-5 bg-surface-container-low rounded-2xl">
+<h4 class="font-button text-button text-on-surface mb-2">Can I retake the assessment?</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Yes! You can retake the assessment anytime from the Assessment page. This helps you track your progress and see how your anxiety levels change over time.</p>
+</div>
+<div class="p-5 bg-surface-container-low rounded-2xl">
+<h4 class="font-button text-button text-on-surface mb-2">Is my data private and secure?</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Absolutely. Your data is encrypted and never shared with third parties. You can delete your account and all associated data anytime from Settings.</p>
+</div>
+<div class="p-5 bg-surface-container-low rounded-2xl">
+<h4 class="font-button text-button text-on-surface mb-2">How often should I practice?</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed" id="supportPracticeTip"></p>
+</div>
+</div>
+</div>
+<!-- Contact Section -->
+<div class="bg-white rounded-3xl border border-blue-50 p-8 space-y-6">
+<h3 class="font-h2 text-h2 text-on-surface pb-4 border-b border-blue-50">Contact Us</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-gap-md">
+<div class="p-5 bg-surface-container-low rounded-2xl flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="mail">mail</span>
+<div>
+<h4 class="font-button text-button text-on-surface mb-1">Email</h4>
+<p class="text-sm text-on-surface-variant">support@socialease.app</p>
+<p class="text-xs text-on-surface-variant mt-1">We respond within 24 hours</p>
+</div>
+</div>
+<div class="p-5 bg-surface-container-low rounded-2xl flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="chat">chat</span>
+<div>
+<h4 class="font-button text-button text-on-surface mb-1">Live Chat</h4>
+<p class="text-sm text-on-surface-variant">Available Mon-Fri, 9AM-6PM</p>
+<p class="text-xs text-on-surface-variant mt-1" id="supportResponseTime"></p>
+</div>
+</div>
+<div class="p-5 bg-surface-container-low rounded-2xl flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="forum">forum</span>
+<div>
+<h4 class="font-button text-button text-on-surface mb-1">Community</h4>
+<p class="text-sm text-on-surface-variant">Join our supportive community forums</p>
+</div>
+</div>
+<div class="p-5 bg-surface-container-low rounded-2xl flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="book">book</span>
+<div>
+<h4 class="font-button text-button text-on-surface mb-1">Documentation</h4>
+<p class="text-sm text-on-surface-variant">Browse our detailed user guides</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Report a Problem -->
+<div class="bg-white rounded-3xl border border-error-container/30 p-8">
+<h3 class="font-h2 text-h2 text-on-surface pb-4 border-b border-error-container/30 mb-6">Report a Problem</h3>
+<form id="supportForm" class="space-y-4">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase tracking-wider">Subject</label>
+<input class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none text-on-surface" id="supportSubject" placeholder="Brief description of the issue" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase tracking-wider">Description</label>
+<textarea class="w-full px-4 py-3 bg-surface-container-low border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none text-on-surface min-h-[120px] resize-none" id="supportDescription" placeholder="Tell us more about what happened..."></textarea>
+</div>
+<div class="flex justify-end">
+<button type="submit" class="bg-primary text-on-primary font-button text-button px-8 py-3 rounded-full shadow-lg shadow-primary/20 hover:scale-[0.98] active:scale-95 transition-all" id="supportSubmit">
+Submit Report
+</button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<script src="app.js"></script>
+</body></html>
